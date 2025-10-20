@@ -1,0 +1,49 @@
+CREATE DATABASE Farejo;
+GO
+
+USE Farejo;
+GO
+
+CREATE TABLE Administrador (
+    IdAdministrador INT IDENTITY(1,1) PRIMARY KEY,
+    Nome VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE,
+    Senha VARCHAR(255) NOT NULL
+);
+GO
+
+CREATE TABLE Ong (
+    IdOng INT IDENTITY(1,1) PRIMARY KEY,
+    NomeOng VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE,
+    Senha VARCHAR(255) NOT NULL,
+    CNPJ CHAR(14) NOT NULL UNIQUE,
+    NomeResponsavel VARCHAR(100) NOT NULL,
+    CPFResponsavel CHAR(11) NOT NULL UNIQUE,
+    TelefoneContato VARCHAR(20),
+    CEP CHAR(8),
+    Rua VARCHAR(100),
+    Numero VARCHAR(10),
+    Cidade VARCHAR(100),
+    UF CHAR(2),
+    Complemento VARCHAR(100),
+    Bairro VARCHAR(100),
+    Descricao TEXT
+);
+GO
+
+CREATE TABLE Cliente (
+    IdCliente INT IDENTITY(1,1) PRIMARY KEY,
+    Nome VARCHAR(100) NOT NULL,
+    CPF CHAR(11) NOT NULL UNIQUE,
+    Email VARCHAR(100) NOT NULL UNIQUE,
+    Senha VARCHAR(255) NOT NULL,
+    CEP CHAR(8),
+    Rua VARCHAR(100),
+    Numero VARCHAR(10),
+    Cidade VARCHAR(100),
+    UF CHAR(2),
+    Complemento VARCHAR(100),
+    Bairro VARCHAR(100)
+);
+GO
