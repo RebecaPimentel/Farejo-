@@ -203,3 +203,45 @@ form input:not(:placeholder-shown) {
     outline: 2px solid #c76d07;
     transition: background 0.2s, color 0.2s;
 }
+
+.input-group-file {
+    border-radius: 30px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: sans-serif;
+  }
+  
+  /* esconde o input real */
+  .fileiInput {
+    display: none;
+  }
+  
+  /* estiliza o label (o "botão") */
+  #imagem-label {
+    width: 100%;
+    height: 40px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  #imagem-label:hover {
+    background: #f0f0f0;
+    color: #a55103;
+  }
+  
+  /* texto do nome do arquivo */
+  .file-name {
+    font-size: 0.85rem;
+    color: #fff;
+    margin-left: 4px;
+  }
