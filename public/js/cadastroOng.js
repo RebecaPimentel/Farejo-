@@ -32,4 +32,16 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+});
+
+const input = document.getElementById('imagem');
+const fileName = document.getElementById('file-name');
+
+input.addEventListener('change', () => {
+  if (input.files.length > 0) {
+    fileName.textContent = input.files[0].name;
+  } else {
+    fileName.textContent = 'Nenhum arquivo selecionado';
+  }
 });
